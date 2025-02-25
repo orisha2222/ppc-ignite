@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PPC Ignite</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            animation: fadeIn 1s ease-in;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        header {
+            background-color: #0052cc;
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+            animation: slideIn 1.5s ease-in-out;
+        }
+
+        @keyframes slideIn {
+            0% { transform: translateY(-50px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            margin: 10px 0;
+        }
+
+        .cta-button {
+            padding: 15px 25px;
+            background-color: #ff6f00;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+            border-radius: 5px;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.1);
+            background-color: #ff8f00;
+        }
+
+        section {
+            padding: 40px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(50px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 30px;
+        }
+
+        .email-link {
+            color: #ff6f00;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .email-link:hover {
+            text-decoration: underline;
+        }
+
+        .cta-button:focus {
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>PPC Ignite</h1>
+        <h2>Maximize Your ROI with Expert Google Ads Management</h2>
+        <button class="cta-button" onclick="openEmailForm()">Get Your Free Ads Audit Today!</button>
+    </header>
+
+    <section>
+        <h2>About Us</h2>
+        <p>At PPC Ignite, we specialize in driving results with expertly crafted Google Ads campaigns. Our mission is to help businesses like yours grow by maximizing your return on investment through effective digital marketing strategies. Get in touch with us for a consultation and watch your business thrive!</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 PPC Ignite. All rights reserved.</p>
+        <p>Contact Us: <a href="mailto:contact@ppcignite.com" class="email-link">contact@ppcignite.com</a></p>
+    </footer>
+
+    <script>
+        // Function to open email client
+        function openEmailForm() {
+            const email = "contact@ppcignite.com";
+            window.location.href = `mailto:${email}?subject=Free Ads Audit Request`;
+            playClickSound();
+        }
+
+        // Sound effect when clicking buttons
+        function playClickSound() {
+            const audio = new Audio('https://www.soundjay.com/button/beep-07.wav');
+            audio.play();
+        }
+    </script>
+</body>
+</html>
